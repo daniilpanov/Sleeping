@@ -1,5 +1,7 @@
 package com.my.newgame;
 
+import com.my.newgame.settings.CSettings;
+
 import javax.swing.*;
 
 import static javax.swing.UIManager.*;
@@ -20,10 +22,22 @@ public class Main
     
     public static void main(String[] args)
     {
-        if (!setNewLookAndFeel("Nimbus"))
+        try
+        {
+            if (!CSettings.settingsInit())
+            {
+                System.out.println("Что-то пошло не так...");
+            }
+        }
+        catch(Exception e)
+        {
+            System.err.println(e.getMessage());
+        }
+        
+        /*if (!setNewLookAndFeel("Nimbus"))
         {
             setNewLookAndFeel(DEFAULT_LOOK_AND_FEEL);
-        }
+        }*/
     }
     
     public static boolean switchMode(String new_mode)
