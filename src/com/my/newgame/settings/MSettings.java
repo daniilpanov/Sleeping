@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// !!!УБЕДИТЕЛЬНАЯ ПРОСЬБА!!!
+// СЛАБОНЕРВНЫМ НЕ ЧИТАТЬ!
+
 class MSettings extends JFrame
 {
     // Константы для логов
@@ -15,24 +18,45 @@ class MSettings extends JFrame
             UNKNOWN_ERROR = -1,
             FILE_IS_INVALID = 3,
             ACCESS_DENIED = 4;
+    // Константы пути
+    static final String
+            SETTINGS_FOLDER = "res/config/",
+            GLOBAL_SETTINGS = SETTINGS_FOLDER + "global_settings.ini",
+            GAME_SETTINGS = SETTINGS_FOLDER + "game_settings.ini";
     
     // Настройки (cash = {key = {name, value}})
-    List<String[]> global_settings_cash = new ArrayList<>(), // глобальные
+    private List<String[]> global_settings_cash = new ArrayList<>(), // глобальные
             game_settings_cash = new ArrayList<>(); // игровые
+
     // Объекты для манипуляций файлом с глобальными настройками
     File global_config = null;
-    FileWriter global_config_editor = null;
-    FileReader global_config_reader = null;
-    Scanner global_config_scanner = null;
+    private FileWriter global_config_editor = null;
+    private FileReader global_config_reader = null;
+    private Scanner global_config_scanner = null;
     // Для манипуляций файлом с настройками игры
     File game_config = null;
-    FileWriter game_config_editor = null;
-    FileReader game_config_reader = null;
-    Scanner game_config_scanner = null;
-    
-    // Инициализация объекта типа File для работы с файлом с глобальными настройками
-    int initGlobalConfigFile()
+    private FileWriter game_config_editor = null;
+    private FileReader game_config_reader = null;
+    private Scanner game_config_scanner = null;
+
+    // Проверка пути до файла с настройками
+    private void checkPath(String path) throws IllegalArgumentException
     {
+        if (!path.equals(GLOBAL_SETTINGS) && !path.equals(GAME_SETTINGS))
+        {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    ///////////////////////
+    /// INITIALIZATIONS
+    ///////////////////////
+
+    // Инициализация объекта типа File для работы с файлом с глобальными настройками
+    int initConfigFile(String path) throws IllegalArgumentException
+    {
+        // Проверяем путь
+        checkPath(path);
         // Изначально всё хорошо
         int res = ALL_RIGHT;
         // Инициализация
@@ -41,7 +65,7 @@ class MSettings extends JFrame
         if (!global_config.exists())
         {
             // то всё плохо,
-            // и уведомляем о том, что файла не существует
+            // и мы уведомляем о том, что файла не существует
             res = FILE_NOT_EXISTS;
         }
         
@@ -49,7 +73,7 @@ class MSettings extends JFrame
     }
     
     // Создание файла глобальных настроек
-    int createGlobalConfigFile()
+    int createConfigFile(File config)
     {
         // Изначально, как всегда, всё хорошо
         int res = ALL_RIGHT;
@@ -57,41 +81,32 @@ class MSettings extends JFrame
         try
         {
             // создать файл. И если это удаётся, то
-            if (global_config.createNewFile())
+            if (config.createNewFile())
             {
                 // пробуем сделать его нередактируемым для всех, кроме себя
-                if (!global_config.setWritable(false, false)
-                    || !global_config.setWritable(true, true)
-                )
+                if (!config.setReadOnly())
                 {
                     // при неудаче говорим, что файл получился неправильным
                     res = FILE_IS_INVALID;
                 }
-                
-                // Если не инициализируется объект-редактор глобальных настроек,
-                if (initGlobalConfigEditor() != ALL_RIGHT)
-                {
-                    // то выходим из метода, возвратив "UNKNOWN_ERROR"
-                    return UNKNOWN_ERROR;
-                }
+
+                FileWriter tmp_config_editor = new FileWriter(config);
                 // Если всё прошло удачно, то
                 if (res == ALL_RIGHT)
                 {
                     // записываем настройки по умолчанию,
-                    global_config_editor.write(
+                    tmp_config_editor.write(
                             "lookAndFeel: Nimbus\n" +
                             "lng: ru"
                     );
-                    // очищаем буфер,
-                    global_config_editor.flush();
-                    // закрываем файл
-                    global_config_editor.close();
-                    // и убираем объект
-                    global_config_editor = null;
+                    // очищаем буфер
+                    tmp_config_editor.flush();
+                    // и закрываем файл
+                    tmp_config_editor.close();
                 }
             }
             // Если создать файл (наверное, читая мой код,
-            // вы уже забыли, что мы делаем) "global_settings.ini",
+            // вы уже забыли, что мы делаем) не получилось,
             else
             {
                 // то сообщаем, что мы не можем создать файл
@@ -108,13 +123,25 @@ class MSettings extends JFrame
     }
     
     //
-    int initGlobalConfigEditor()
+    int initConfigEditor(String path) throws IllegalArgumentException
     {
+        // Проверяем путь
+        checkPath(path);
+
         int res = ALL_RIGHT;
         
         try
         {
-            global_config_editor = new FileWriter(global_config);
+            switch (path)
+            {
+                case GLOBAL_SETTINGS:
+                    global_config_editor = new FileWriter(global_config);
+                    break;
+
+                case GAME_SETTINGS:
+                    game_config_editor = new FileWriter(game_config);
+                    break;
+            }
         }
         catch (IOException e)
         {
@@ -126,13 +153,25 @@ class MSettings extends JFrame
     }
     
     //
-    int initGlobalConfigReader()
+    int initConfigReader(String path) throws IllegalArgumentException
     {
+        // Проверяем путь
+        checkPath(path);
+
         int res = ALL_RIGHT;
         
         try
         {
-            global_config_reader = new FileReader(global_config);
+            switch (path)
+            {
+                case GLOBAL_SETTINGS:
+                    global_config_reader = new FileReader(global_config);
+                    break;
+
+                case GAME_SETTINGS:
+                    game_config_reader = new FileReader(game_config);
+                    break;
+            }
         }
         catch (FileNotFoundException e)
         {
@@ -143,10 +182,39 @@ class MSettings extends JFrame
     }
     
     // Инициализация сканнера
-    void initGlobalConfigScanner()
+    void initConfigScanner(String path) throws IllegalArgumentException
     {
+        // Проверяем путь
+        checkPath(path);
         // Если все предыдущие методы прошли успешно, тогда здесь точно всё будет хорошо
-        global_config_scanner = new Scanner(global_config_reader);
+        // Здесь просто выбираем нужный нам объект и инициализируем его
+        switch (path)
+        {
+            case GLOBAL_SETTINGS:
+                global_config_scanner = new Scanner(global_config_reader);
+                break;
+
+            case GAME_SETTINGS:
+                game_config_scanner = new Scanner(game_config_reader);
+                break;
+        }
         // *упс, что-то пошло не так* (шутка)
     }
+
+    void initGlobalCash()
+    {
+        while (global_config_scanner.hasNext(": "))
+        {
+            global_settings_cash.add(new String[]
+            {
+                   global_config_scanner.next(),
+                   global_config_scanner.next()
+            });
+        }
+    }
+
+    ///////////////////////
+    /// CASH MANAGERS
+    ///////////////////////
+
 }
