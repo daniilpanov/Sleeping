@@ -52,6 +52,8 @@ public class CSettings extends MSettings
             {
                 // то пробуем его создать
                 int created = createConfigFile(global_config);
+                //
+                init = created;
                 // И если что-то пошло не так, смотрим, что
                 if (created != ALL_RIGHT)
                 {
@@ -79,8 +81,8 @@ public class CSettings extends MSettings
                     logs.add(new String[]{"createGlobalConfigFile", message});
                 }
             }
-            // А если всё хорошо
-            else if (init == ALL_RIGHT)
+            // Если всё хорошо
+            if (init == ALL_RIGHT)
             {
                 // то идём дальше (#идёмдальше, www.go-then.com)!
                 //
@@ -174,9 +176,9 @@ public class CSettings extends MSettings
                                 }
                 );
             }
-            catch (Exception ignored)
+            catch (Exception ex2)
             {
-            
+                value = null;
             }
         }
         

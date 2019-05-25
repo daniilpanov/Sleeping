@@ -46,6 +46,7 @@ class MSettings extends JFrame
     {
         if (!path.equals(GLOBAL_SETTINGS) && !path.equals(GAME_SETTINGS))
         {
+            System.out.println("aga!");
             throw new IllegalArgumentException();
         }
     }
@@ -97,7 +98,7 @@ class MSettings extends JFrame
                 // и закрываем файл
                 tmp_config_editor.close();
                 //
-                initConfigFile(config.getPath());
+                initConfigFile(config.getPath().replace("\\", "/"));
             }
             // Если создать файл (наверное, читая мой код,
             // вы уже забыли, что мы делаем) не получилось,
@@ -198,6 +199,7 @@ class MSettings extends JFrame
     void initGlobalCash()
     {
         String key, value;
+        System.out.println(global_config_scanner);
         while (global_config_scanner.hasNext())
         {
             key = global_config_scanner.next();
