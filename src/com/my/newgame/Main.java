@@ -4,6 +4,8 @@ import com.my.newgame.settings.CSettings;
 
 import javax.swing.*;
 
+import java.awt.*;
+
 import static javax.swing.UIManager.*;
 
 public class Main
@@ -27,17 +29,23 @@ public class Main
             if (!CSettings.settingsInit())
             {
                 System.out.println("Что-то пошло не так...");
+                System.exit(1);
             }
         }
         catch(Exception e)
         {
             System.err.println(e.getMessage());
         }
-        System.out.println(CSettings.getInstance().getSetting(CSettings.GLOBAL_SETTINGS, "lng"));
-        /*if (!setNewLookAndFeel("Nimbus"))
+        
+        String look_and_feel
+                = CSettings.getInstance()
+                .getSetting(CSettings.GLOBAL_SETTINGS, "lookAndFeel");
+        if (!setNewLookAndFeel(look_and_feel))
         {
             setNewLookAndFeel(DEFAULT_LOOK_AND_FEEL);
-        }*/
+        }
+    
+        EventQueue.invokeLater(Main::new);
     }
     
     public static boolean switchMode(String new_mode)

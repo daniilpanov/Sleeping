@@ -35,8 +35,7 @@ public class CSettings extends MSettings
     {
         if (!initGlobalSettings())
         {
-            System.out.println("error!");
-            //printLogs();
+            printLogs();
         }
     }
     
