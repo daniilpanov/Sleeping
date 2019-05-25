@@ -33,7 +33,7 @@ public class Main
         {
             System.err.println(e.getMessage());
         }
-        
+        System.out.println(CSettings.getInstance().getSetting(CSettings.GLOBAL_SETTINGS, "lng"));
         /*if (!setNewLookAndFeel("Nimbus"))
         {
             setNewLookAndFeel(DEFAULT_LOOK_AND_FEEL);

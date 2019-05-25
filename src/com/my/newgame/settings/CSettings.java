@@ -35,11 +35,8 @@ public class CSettings extends MSettings
     {
         if (!initGlobalSettings())
         {
-            System.out.println("We have some errors");
-        }
-        else
-        {
-            System.out.println("All right!");
+            System.out.println("error!");
+            //printLogs();
         }
     }
     
@@ -88,20 +85,6 @@ public class CSettings extends MSettings
             {
                 // то идём дальше (#идёмдальше, www.go-then.com)!
                 //
-                if (initConfigEditor(GLOBAL_SETTINGS) == UNKNOWN_ERROR)
-                {
-                    //
-                    logs.add(
-                            new String[]
-                                    {
-                                            "initGlobalConfigEditor",
-                                            "<i><b>Unknown error!</b></i>"
-                                    }
-                    );
-                    res = false;
-                }
-
-                //
                 init = initConfigReader(GLOBAL_SETTINGS);
                 if (init == FILE_NOT_EXISTS)
                 {
@@ -121,6 +104,22 @@ public class CSettings extends MSettings
                 {
                     //
                     initConfigScanner(GLOBAL_SETTINGS);
+                    //
+                    initGlobalCash();
+                }
+                
+                //
+                if (initConfigEditor(GLOBAL_SETTINGS) == UNKNOWN_ERROR)
+                {
+                    //
+                    logs.add(
+                            new String[]
+                                    {
+                                            "initGlobalConfigEditor",
+                                            "<i><b>Unknown error!</b></i>"
+                                    }
+                    );
+                    res = false;
                 }
             }
         }
@@ -137,6 +136,52 @@ public class CSettings extends MSettings
         }
         
         return res;
+    }
+    
+    //
+    public String getSetting(String from, String name)
+    {
+        String value = null;
+        try
+        {
+            value = super.getSetting(from, name);
+        }
+        catch (IllegalArgumentException ex)
+        {
+            logs.add(
+                    new String[]
+                            {
+                                    "initGlobalConfigEditor",
+                                    "<i><b>Unknown error!</b></i>"
+                            }
+            );
+        }
+        catch (Exception ex)
+        {
+            //
+            initGlobalCash();
+            //
+            try
+            {
+                value = super.getSetting(from, name);
+            }
+            catch (IllegalArgumentException ex2)
+            {
+                logs.add(
+                        new String[]
+                                {
+                                        "initGlobalConfigEditor",
+                                        "<i><b>Unknown error!</b></i>"
+                                }
+                );
+            }
+            catch (Exception ignored)
+            {
+            
+            }
+        }
+        
+        return value;
     }
     
     // Показать настройки
@@ -157,5 +202,13 @@ public class CSettings extends MSettings
     public void hideSettings()
     {
         setVisible(false);
+    }
+    
+    private void printLogs()
+    {
+        for (String[] log : logs)
+        {
+            System.out.println(log[0] + ": " + log[1]);
+        }
     }
 }
