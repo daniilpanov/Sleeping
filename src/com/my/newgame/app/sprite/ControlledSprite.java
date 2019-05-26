@@ -1,4 +1,4 @@
-package com.my.newgame.sprite;
+package com.my.newgame.app.sprite;
 
 interface ControlledSprite
 {

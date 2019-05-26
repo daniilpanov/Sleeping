@@ -1,4 +1,4 @@
-package com.my.newgame.sprite;
+package com.my.newgame.app.sprite;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,11 +13,11 @@ public class Texture
     /// CONSTRUCTORS
     /////////////////////
     
-    public Texture(double x, double y, ImageIcon texture_image, Component parent
-    )
+    public Texture(double x, double y, double z, ImageIcon texture_image, Component parent)
     {
         this.x = x;
         this.y = y;
+        this.z = z;
         this.texture_image = texture_image;
         this.angle = 0;
         this.parent = parent;
@@ -25,7 +25,7 @@ public class Texture
     
     public Texture(ImageIcon texture_image, Component parent)
     {
-        this(0, 0, texture_image, parent);
+        this(0, 0, 0, texture_image, parent);
     }
     
     /////////////////////

@@ -1,4 +1,6 @@
-package com.my.newgame.settings;
+package com.my.newgame.app.settings;
+
+import com.sun.istack.internal.NotNull;
 
 import javax.management.openmbean.InvalidKeyException;
 import javax.swing.*;
@@ -6,7 +8,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 // !!!УБЕДИТЕЛЬНАЯ ПРОСЬБА!!!
 // СЛАБОНЕРВНЫМ НЕ ЧИТАТЬ!
@@ -46,7 +47,6 @@ class MSettings extends JFrame
     {
         if (!path.equals(GLOBAL_SETTINGS) && !path.equals(GAME_SETTINGS))
         {
-            System.out.println("aga!");
             throw new IllegalArgumentException();
         }
     }
@@ -56,7 +56,7 @@ class MSettings extends JFrame
     ///////////////////////
 
     // Инициализация объекта типа File для работы с файлом с глобальными настройками
-    int initConfigFile(String path) throws IllegalArgumentException
+    synchronized int initConfigFile(String path) throws IllegalArgumentException
     {
         // Проверяем путь
         checkPath(path);
@@ -76,7 +76,7 @@ class MSettings extends JFrame
     }
     
     // Создание файла глобальных настроек
-    int createConfigFile(File config)
+    synchronized int createConfigFile(File config)
     {
         // Изначально, как всегда, всё хорошо
         int res = ALL_RIGHT;
@@ -90,8 +90,11 @@ class MSettings extends JFrame
                 FileWriter tmp_config_editor = new FileWriter(config);
                 // записываем настройки по умолчанию,
                 tmp_config_editor.write(
-                        "lookAndFeel: Nimbus\n" +
-                                "lng: ru"
+                        "gameName: Sleeping\n" +
+                                "lookAndFeel: Nimbus\n" +
+                                "lng: ru\n" +
+                                "slides: 5\n" +
+                                "isFirstStart: true"
                 );
                 // очищаем буфер
                 tmp_config_editor.flush();
@@ -118,7 +121,7 @@ class MSettings extends JFrame
     }
     
     //
-    int initConfigEditor(String path) throws IllegalArgumentException
+    synchronized int initConfigEditor(String path) throws IllegalArgumentException
     {
         // Проверяем путь
         checkPath(path);
@@ -148,7 +151,7 @@ class MSettings extends JFrame
     }
     
     //
-    int initConfigReader(String path) throws IllegalArgumentException
+    synchronized int initConfigReader(String path) throws IllegalArgumentException
     {
         // Проверяем путь
         checkPath(path);
@@ -177,7 +180,7 @@ class MSettings extends JFrame
     }
     
     // Инициализация сканнера
-    void initConfigScanner(String path) throws IllegalArgumentException
+    synchronized void initConfigScanner(String path) throws IllegalArgumentException
     {
         // Проверяем путь
         checkPath(path);
@@ -196,10 +199,10 @@ class MSettings extends JFrame
         // *упс, что-то пошло не так* (шутка)
     }
 
-    void initGlobalCash()
+    synchronized void initGlobalCash()
     {
         String key, value;
-        System.out.println(global_config_scanner);
+        
         while (global_config_scanner.hasNext())
         {
             key = global_config_scanner.next();
@@ -213,7 +216,7 @@ class MSettings extends JFrame
     ///////////////////////
     /// CASH MANAGERS
     ///////////////////////
-    String getSetting(String from, String key) throws Exception
+    synchronized String getSetting(String from, String key) throws Exception
     {
         List<String[]> config;
         String value = null;
@@ -257,5 +260,70 @@ class MSettings extends JFrame
         }
         
         return value;
+    }
+    
+    synchronized boolean setSetting(String from, String key, String new_value)
+            throws Exception
+    {
+        boolean is_set = false;
+        
+        FileWriter writer;
+        List<String[]> config;
+        
+        switch (from)
+        {
+            case GLOBAL_SETTINGS:
+                writer = global_config_editor;
+                config = global_settings_cash;
+                break;
+            
+            case GAME_SETTINGS:
+                writer = game_config_editor;
+                config = game_settings_cash;
+                break;
+            
+            default:
+                throw new IllegalArgumentException();
+        }
+    
+        for (int i = 0; i < config.size(); i++)
+        {
+            String[] item = config.get(i);
+            if (item[0].equals(key + ":"))
+            {
+                config.set(i, new String[] {key, new_value});
+                is_set = true;
+                break;
+            }
+        }
+        
+        if (!is_set)
+        {
+            throw new Exception("This setting does not exist!");
+        }
+        
+        try
+        {
+            writeCash(writer, config);
+        }
+        catch (IOException ex)
+        {
+            is_set = false;
+        }
+        
+        return is_set;
+    }
+    
+    private synchronized void writeCash(@NotNull FileWriter writer, List<String[]> config)
+            throws IOException
+    {
+        writer.write("");
+    
+        for (String[] item : config)
+        {
+            writer.append(item[0]).append(" ").append(item[1]);
+        }
+        
+        writer.flush();
     }
 }

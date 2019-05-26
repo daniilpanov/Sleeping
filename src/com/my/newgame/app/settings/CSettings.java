@@ -1,4 +1,4 @@
-package com.my.newgame.settings;
+package com.my.newgame.app.settings;
 
 import java.util.ArrayList;
 import java.util.List;

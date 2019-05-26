@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52d832a8-3a81-476b-92d0-d23595f9d5ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/start.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/Img.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/about/CAbout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/about/MAbout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/about/VAbout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/game/CGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/game/GameMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/menu/CMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/my/newgame/app/sprite/SpriteFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/settings/CSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/settings/CSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/settings/MSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/settings/MSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs of Creating.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Logs of Creating.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/game/CGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/game/MGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/game/VGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/game/VGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/game/MGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/menu/CMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/menu/VMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/menu/VMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/settings/CSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/settings/CSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/settings/MSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/settings/MSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/settings/VSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/settings/VSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/sprite/ControlledSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/sprite/ControlledSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/sprite/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/sprite/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/sprite/SpriteFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/my/newgame/sprite/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/my/newgame/app/sprite/Texture.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,44 +41,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/my/newgame/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/my/newgame/settings/CSettings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/my/newgame/settings/MSettings.java">
+        <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/game/CGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="201" column="50" selection-start-line="201" selection-start-column="50" selection-end-line="201" selection-end-column="50" />
+            <state relative-caret-position="204">
+              <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/config/global_settings.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -78,10 +69,16 @@
       <find>Global</find>
       <find>name</find>
       <find>isEmpty</find>
+      <find>res</find>
+      <find>Thread</find>
+      <find>Thread(</find>
+      <find>MAIN_MODE</find>
     </findStrings>
     <replaceStrings>
       <replace>sprite</replace>
       <replace>key</replace>
+      <replace>switched</replace>
+      <replace>START_MODE</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -90,27 +87,42 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/my/newgame/menu/CMenu.java" />
         <option value="$PROJECT_DIR$/res/config/settings.ini" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/settings/VSettings.java" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/game/MGame.java" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/game/CGame.java" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/game/VGame.java" />
         <option value="$PROJECT_DIR$/src/com/my/newgame/menu/VMenu.java" />
         <option value="$PROJECT_DIR$/res/config/game_settings.ini" />
         <option value="$PROJECT_DIR$/res/config/system_settings.ini" />
         <option value="$PROJECT_DIR$/src/com/my/newgame/sprite/ControlledSprite.java" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/sprite/Texture.java" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/sprite/Sprite.java" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/sprite/SpriteFactory.java" />
         <option value="$PROJECT_DIR$/Logs of creating.txt" />
-        <option value="$PROJECT_DIR$/res/config/global_settings.ini" />
         <option value="$PROJECT_DIR$/res/config/test.cpp" />
-        <option value="$PROJECT_DIR$/src/com/my/newgame/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/my/newgame/settings/CSettings.kt" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/help/VHelp.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/help/MHelp.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/help/CHelp.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/ConnectToServer.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/help/MAbout.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/help/CAbout.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/help/VAbout.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/about/VAbout.java" />
+        <option value="$PROJECT_DIR$/res/config/about.txt" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/about/MAbout.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/game/MGame.java" />
+        <option value="$PROJECT_DIR$/res/config/global_settings.ini" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/game/VGame.java" />
         <option value="$PROJECT_DIR$/src/com/my/newgame/settings/CSettings.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/settings/VSettings.java" />
         <option value="$PROJECT_DIR$/src/com/my/newgame/settings/MSettings.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/menu/CMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/sprite/Texture.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/game/GameMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/game/CGame.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/Main.java" />
+        <option value="$PROJECT_DIR$/tests/key_listeners/MultiKeyListeners.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/about/CAbout.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/sprite/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/Img.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/sprite/SpriteFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/my/newgame/app/game/CGame.java" />
       </list>
     </option>
   </component>
@@ -126,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,25 +149,31 @@
             <path>
               <item name="newgame" type="b2602c69:ProjectViewProjectNode" />
               <item name="newgame" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newgame" type="b2602c69:ProjectViewProjectNode" />
               <item name="newgame" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="newgame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newgame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newgame" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558792238222" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/res/config/game_settings.ini&#10;C:/Программирование/Java/newgame/res/config/about.txt&#10;C:/Программирование/Java/newgame/res/config/global_settings.ini&#10;C:/Программирование/Java/newgame/tests/key_listeners/MultiKeyListeners.java" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558896206720" />
+    <property name="last.edited.regexp" value="test: test" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -172,9 +191,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MultiKeyListeners">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.my.newgame.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.my.newgame.app.Main" />
       <module name="newgame" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -183,8 +202,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MultiKeyListeners" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="key_listeners.MultiKeyListeners" />
+      <module name="newgame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="key_listeners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MultiKeyListeners" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -206,7 +239,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27912253" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28366113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -215,7 +248,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32843137" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32843137" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -235,109 +268,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/swing/UIManager.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/PrintStream.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Throwable.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/settings.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/security/Permission.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/security/AccessController.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileReader.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/game/CG.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/menu/VMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/game/CGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/game/VGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/menu/CMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/game/MGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/sprite/ControlledSprite.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/sprite/Texture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/sprite/SpriteFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/sprite/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="116" column="8" lean-forward="true" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1862#1863#0" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/settings/VSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileSystem.java" />
-    <entry file="file://$PROJECT_DIR$/newgame.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logs of creating.txt" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileWriter.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/File.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/Writer.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/OutputStream.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/nio/cs/StreamEncoder.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/OutputStreamWriter.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/nio/file/InvalidPathException.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/FileWriter.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/swing/JOptionPane.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/File.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/management/openmbean/InvalidKeyException.java">
@@ -361,9 +291,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/config/game_settings.ini">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -403,13 +330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/config/test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/res/config/test.cpp" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/regex/Pattern.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -486,34 +407,274 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/Main.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        <state relative-caret-position="383">
+          <caret line="133" column="24" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/math/BigInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/security/util/Debug.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1054">
+          <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/security/AccessControlContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="117" column="37" lean-forward="true" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="1005" column="19" selection-start-line="1005" selection-start-column="19" selection-end-line="1005" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="363" column="25" selection-start-line="363" selection-start-column="25" selection-end-line="363" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/ConnectToServer.java" />
+    <entry file="file://$PROJECT_DIR$/res/config/game_settings.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/about/VAbout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/settings/CSettings.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/start.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/config/about.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/about/MAbout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-314">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/swing/JFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1156">
+          <caret line="187" column="11" selection-start-line="187" selection-start-column="11" selection-end-line="187" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/game/VGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/settings/VSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/config/global_settings.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="51">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/settings/MSettings.java">
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/settings/MSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="201" column="50" selection-start-line="201" selection-start-column="50" selection-end-line="201" selection-end-column="50" />
+        <state relative-caret-position="-17">
+          <caret line="309" column="9" lean-forward="true" selection-start-line="309" selection-start-column="9" selection-end-line="309" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/sprite/Texture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
+          <folding>
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/game/GameMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/settings/CSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="195" column="12" lean-forward="true" selection-start-line="195" selection-start-column="12" selection-end-line="195" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/VM.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="191" column="31" selection-start-line="191" selection-start-column="31" selection-end-line="191" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/menu/CMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/menu/VMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/key_listeners/MultiKeyListeners.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#313#650#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#676#1013#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/about/CAbout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/sprite/Sprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+          <folding>
+            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#3027#3028#0" expanded="true" />
+            <element signature="e#3272#3273#0" expanded="true" />
+            <element signature="e#3332#3333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/sprite/SpriteFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1558900246045" expanded="true" signature="1632:2571" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/Img.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="137" column="34" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/game/MGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="374" column="9" lean-forward="true" selection-start-line="374" selection-start-column="9" selection-end-line="374" selection-end-column="9" />
+          <folding>
+            <element signature="e#19132#19133#0" expanded="true" />
+            <element signature="e#19175#19176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/my/newgame/app/game/CGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

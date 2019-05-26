@@ -1,4 +1,4 @@
-package com.my.newgame.menu;
+package com.my.newgame.app.menu;
 
 import javax.swing.*;
 

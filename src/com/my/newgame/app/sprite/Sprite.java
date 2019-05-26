@@ -1,16 +1,18 @@
-package com.my.newgame.sprite;
+package com.my.newgame.app.sprite;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class Sprite
 {
     protected double x, y, width, height;
-    protected Texture[] textures;
+    protected Texture[][] textures;
     private Component parent;
     
     public Sprite(double x, double y, double width, double height,
-                  Texture[] textures, Component parent
+                  Texture[][] textures, Component parent
     )
     {
         moveTo(x, y);
@@ -66,7 +68,7 @@ public class Sprite
         
         ControlledByTimer(double x, double y,
                                   double width, double height,
-                                  Texture[] textures, Component parent,
+                                  Texture[][] textures, Component parent,
                                   int delay
         )
         {
@@ -96,7 +98,7 @@ public class Sprite
         
         ControlledByKeyEvents(double x, double y,
                               double width, double height,
-                              Texture[] textures, Component parent,
+                              Texture[][] textures, Component parent,
                               Component for_key_listener
         )
         {
@@ -108,13 +110,35 @@ public class Sprite
         @Override
         public void setMoving()
         {
-        
+            for_key_listener.addKeyListener(new KeyAdapter()
+            {
+                /**
+                 * Invoked when a key has been pressed.
+                 *
+                 * @param e {@link KeyEvent}
+                 */
+                @Override
+                public void keyPressed(KeyEvent e)
+                {
+                    super.keyPressed(e);
+                }
+    
+                /**
+                 * Invoked when a key has been released.
+                 *
+                 * @param e {@link KeyEvent}
+                 */
+                @Override
+                public void keyReleased(KeyEvent e)
+                {
+                    super.keyReleased(e);
+                }
+            });
         }
     
         @Override
-        public void moving()
-        {
+        public abstract void moving();
         
-        }
+        public abstract void stop();
     }
 }
