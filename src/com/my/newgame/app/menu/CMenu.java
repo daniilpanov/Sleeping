@@ -17,20 +17,21 @@ public class CMenu extends JFrame
         
         return instance;
     }
-    
-    private VMenu view = new VMenu();
-    
+
     private CMenu()
     {
-        setUndecorated(true);
+        VMenu view = new VMenu();
+
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //setUndecorated(true);
         getContentPane().add(view);
         
         view.play.addActionListener(e -> play());
         view.settings.addActionListener(e -> settings());
         view.about.addActionListener(e -> about());
         view.exit.addActionListener(e -> exit());
-        
-        setExtendedState(EXIT_ON_CLOSE);
+
+        setExtendedState(MAXIMIZED_BOTH);
     }
     
     private void play()
@@ -60,7 +61,7 @@ public class CMenu extends JFrame
         
         if (answer == JOptionPane.YES_OPTION)
         {
-            System.exit(0);
+            Main.exit();
         }
         
     }
