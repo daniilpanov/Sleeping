@@ -27,10 +27,7 @@ public class Main
             //
             look_and_feel = DEFAULT_LOOK_AND_FEEL;
     //
-    private static final boolean is_first_start
-            = CSettings.getInstance()
-            .getSetting(CSettings.GLOBAL_SETTINGS, "isFirstStart")
-            .equals("true");
+    private static boolean is_first_start;
     //
     private static Thread game_process = null, old_game_process = null;
     
@@ -50,6 +47,13 @@ public class Main
             {
                 //
                 showSettingsInitErrorDialog();
+            }
+            else
+            {
+                is_first_start
+                        = CSettings.getInstance()
+                        .getSetting(CSettings.GLOBAL_SETTINGS, "isFirstStart")
+                        .equals("true");
             }
         }
         //
@@ -81,78 +85,102 @@ public class Main
         //
         boolean switched = false;
         //
-        if (mode.equals(GAME_MODE) && new_mode.equals(GAME_MODE))
+        if (mode != null)
         {
-            switched = true;
-        }
-        //
-        else if (!mode.equals(new_mode))
-        {
-            //
-            switch (new_mode)
+            if (mode.equals(GAME_MODE) && new_mode.equals(GAME_MODE))
             {
-                //
-                case GAME_MODE:
-                    switched = true;
-                    startGame();
-                    break;
-                //
-                case SETTINGS_MODE:
-                    switched = true;
-                    CSettings.getInstance().showSettings();
-                    break;
-                //
-                case ABOUT_MODE:
-                    switched = true;
-                    CAbout.getInstance().showAbout();
-                    break;
-                //
-                case MENU_MODE:
-                    switched = true;
-                    CMenu.getInstance().showMenu();
-                    break;
+                startGame();
+                stopGame();
+                switched = true;
             }
             //
-            switch (mode)
+            else if (!mode.equals(new_mode))
             {
                 //
-                case GAME_MODE:
-                    switched = true;
-                    stopGame();
-                    break;
+                switch (new_mode)
+                {
+                    //
+                    case GAME_MODE:
+                        switched = true;
+                        startGame();
+                        break;
+                    //
+                    case SETTINGS_MODE:
+                        switched = true;
+                        CSettings.getInstance().showSettings();
+                        break;
+                    //
+                    case ABOUT_MODE:
+                        switched = true;
+                        CAbout.getInstance().showAbout();
+                        break;
+                    //
+                    case MENU_MODE:
+                        switched = true;
+                        CMenu.getInstance().showMenu();
+                        break;
+                }
+                
+                if (switched)
+                {
+                    switched = checkMode();
+                }
+            }
+            //
+            else
+            {
+                switched = true;
+            }
+            //
+            if (switched)
+            {
+                mode = new_mode;
+            }
+            //
+            else
+            {
                 //
-                case SETTINGS_MODE:
-                    switched = true;
-                    CSettings.getInstance().hideSettings();
-                    break;
-                //
-                case ABOUT_MODE:
-                    switched = true;
-                    CAbout.getInstance().hideAbout();
-                    break;
-                //
-                case MENU_MODE:
-                    switched = true;
-                    CMenu.getInstance().hideMenu();
-                    break;
+                showSwitchErrorDialog(new_mode);
             }
         }
-        //
         else
         {
-            switched = true;
+            if (!checkMode())
+            {
+            
+            }
         }
+    }
+    
+    private static boolean checkMode()
+    {
+        boolean switched = false;
         //
-        if (switched)
-        {
-            mode = new_mode;
-        }
-        //
-        else
+        switch (mode)
         {
             //
-            showSwitchErrorDialog(new_mode);
+            case GAME_MODE:
+                switched = true;
+                stopGame();
+                break;
+            //
+            case SETTINGS_MODE:
+                switched = true;
+                CSettings.getInstance().hideSettings();
+                break;
+            //
+            case ABOUT_MODE:
+                switched = true;
+                CAbout.getInstance().hideAbout();
+                break;
+            //
+            case MENU_MODE:
+                switched = true;
+                CMenu.getInstance().hideMenu();
+                break;
         }
+        
+        return switched;
     }
     
     //
